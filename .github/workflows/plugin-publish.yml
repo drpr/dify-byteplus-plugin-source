@@ -72,7 +72,7 @@ jobs:
           wget https://github.com/langgenius/dify-plugin-daemon/releases/download/0.0.6/dify-plugin-linux-amd64
           chmod +x dify-plugin-linux-amd64
 
-      - name: Validate publish token
+      - name: Validate publish token and repo access
         env:
           GH_TOKEN: ${{ secrets.PLUGIN_ACTION }}
         run: |
@@ -80,7 +80,18 @@ jobs:
             echo "::error::Missing repository secret PLUGIN_ACTION."
             exit 1
           fi
-          gh api "repos/${{ env.TARGET_REPO }}" >/dev/null
+          gh auth status >/dev/null 2>&1 || {
+            echo "::error::PLUGIN_ACTION is invalid or expired."
+            exit 1
+          }
+          gh api "repos/${{ env.TARGET_REPO }}" >/dev/null || {
+            echo "::error::PLUGIN_ACTION cannot access ${{ env.TARGET_REPO }}. Ensure it has repository access and contents write permission."
+            exit 1
+          }
+          gh api "repos/${{ env.UPSTREAM_REPO }}" >/dev/null || {
+            echo "::error::PLUGIN_ACTION cannot access ${{ env.UPSTREAM_REPO }}. Ensure it can create or edit pull requests against the upstream repository."
+            exit 1
+          }
 
       - name: Get basic info from manifest
         id: get_basic_info
