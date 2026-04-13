@@ -15,4 +15,4 @@ https://docs.byteplus.com/en/docs/modelark/BytePlus_ModelArk_Data_Processing
 The plugin itself does not retain user data. Data retention is governed by Dify and BytePlus ModelArk.
 
 ## Contact
-If you have questions about this privacy policy, contact: alex.gao@byteplus.com
+If you have questions about this privacy policy, contact: byteplus-dify-support@bytedance.com

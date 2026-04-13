@@ -23,7 +23,7 @@ This plugin provides BytePlus ModelArk model access in Dify via OpenAI-compatibl
 After saving the model credentials, use it in your Dify applications and validate it from the model settings page.
 
 ## Contact
-Email: alex.gao@bytedance.com
+Email: byteplus-dify-support@bytedance.com
 
 ## Repository
 https://github.com/drpr/dify-byteplus-plugin-source/tree/main/model-plugin

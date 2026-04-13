@@ -21,7 +21,7 @@ This plugin provides HTTP tool access to BytePlus Seedream image generation APIs
 Provide a prompt and model ID, then call the tool to generate images. The tool returns the raw JSON response, including the generated image URL or base64 data.
 
 ## Contact
-Email: alex.gao@bytedance.com
+Email: byteplus-dify-support@bytedance.com
 
 ## Repository
 https://github.com/drpr/dify-byteplus-plugin-source/tree/main/seedream-tool

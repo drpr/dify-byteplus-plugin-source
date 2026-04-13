@@ -21,7 +21,7 @@ This plugin provides HTTP tool access to BytePlus Seedance video generation APIs
 Create a video generation task with a prompt and optional images, then query the task status to retrieve the video URL.
 
 ## Contact
-Email: alex.gao@bytedance.com
+Email: byteplus-dify-support@bytedance.com
 
 ## Repository
 https://github.com/drpr/dify-byteplus-plugin-source/tree/main/seedance-tool
